@@ -8,11 +8,11 @@ int main(int argc, const char * argv[]) {
   
   std::vector<double> harmonics;
   double fund {atof(argv[1])};
-  int partial {1};
+  int partials {1};
   
-  while (fund * partial <= HZ_limit) {
-    harmonics.push_back(fund * partial);
-    partial += 1;
+  while (fund * partials <= HZ_limit) {
+    harmonics.push_back(fund * partials);
+    partials += 1;
   }
   for (double i: harmonics)
       std::cout << i << ' ';
